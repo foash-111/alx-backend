@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """pagination, parse the large response into small peices"""
 
 from typing import Tuple
