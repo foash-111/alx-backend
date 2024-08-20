@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
     caching:
-    stores a subset of data in a faster storage medium,
-    typically RAM, to speed up data retrieval
+    What a caching system is:
+    A caching system is an optimization technique
+    that stores a subset of data in a faster storage medium, typically RAM,
+    to speed up data retrieval.
+    It reduces the time it takes to access data that is frequently used
+    by temporarily storing it closer to the processing unit.
 """
 
 from base_caching import BaseCaching
