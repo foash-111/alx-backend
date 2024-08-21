@@ -20,10 +20,12 @@ class MRUCache(BaseCaching):
     is the first to be removed
     """
     def __init__(self):
+        """overide cache_data, make it OrderdDict to handle insertion order"""
         super().__init__()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
+        """add item and consider update value for exist key as accessed one"""
         if not (key is None or item is None):
             if key in self.cache_data.keys():
                 del self.cache_data[key]
@@ -37,6 +39,7 @@ class MRUCache(BaseCaching):
             # the next ime if we want to delete someitem it will be this
 
     def get(self, key):
+        """retrive item, update its insertion order by pop, insert it again"""
         if self.cache_data.get(key):
             value = self.cache_data.pop(key)
             self.cache_data[key] = value
