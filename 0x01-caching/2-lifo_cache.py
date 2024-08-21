@@ -20,12 +20,13 @@ from base_caching import BaseCaching
 class LIFOCache(BaseCaching):
     """First In, First Out"""
     def __init__(self):
+        """overide cache_data, make it OrderdDict to handle insertion order"""
         super().__init__()
         self.order = 0
         self.lifo_cache = {}
 
     def put(self, key, item):
-        """put method"""
+        """add item, omit update value, just consider its added order only"""
         if not (key is None or item is None):
             self.order += 1
 
