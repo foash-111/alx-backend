@@ -15,10 +15,10 @@ from base_caching import BaseCaching
 class BasicCache(BaseCaching):
     """ caching system"""
     def put(self, key, item):
-        """setattr"""
+        """add item, update its value if key exists"""
         if not (key is None or item is None):
             self.cache_data[key] = item
 
     def get(self, key):
-        """dict get method"""
+        """get item value if the exists or None if not"""
         return self.cache_data.get(key)
