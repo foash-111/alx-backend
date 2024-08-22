@@ -30,9 +30,9 @@ class MRUCache(BaseCaching):
             if key in self.cache_data.keys():
                 del self.cache_data[key]
 
-            if len(self.cache_data) >= self.MAX_ITEMS:
+            if len(self.cache_data) == self.MAX_ITEMS:
                 old_key, old_value = self.cache_data.popitem(last=True)
-                print('DISCARD: ', old_key)
+                print('DISCARD:', old_key)
 
             self.cache_data[key] = item
             # now it's consider last added
