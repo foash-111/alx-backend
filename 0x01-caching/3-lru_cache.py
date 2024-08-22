@@ -33,7 +33,7 @@ class LRUCache(BaseCaching):
 
             if len(self.cache_data) == self.MAX_ITEMS:
                 old_key, old_value = self.cache_data.popitem(last=False)
-                print('DISCARD: ', old_key)
+                print('DISCARD:', old_key)
 
             self.cache_data[key] = item
             # now it's consider last added
