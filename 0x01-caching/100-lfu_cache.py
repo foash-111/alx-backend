@@ -23,7 +23,7 @@ class LFUCache(BaseCaching):
         self.lfu_cache = {}
 
     def put(self, key, item):
-        """put"""
+        """add item and consider update value for exist key as accessed one"""
         if not (key is None or item is None):
             if key in self.cache_data.keys():
                 self.lfu_cache[key] += 1
@@ -47,6 +47,7 @@ class LFUCache(BaseCaching):
                 self.lfu_cache[key] = 1
 
     def get(self, key):
+        """retrive item, update its insertion order by pop, insert it again"""
         if self.cache_data.get(key):
             value = self.cache_data.pop(key)
             self.cache_data[key] = value
