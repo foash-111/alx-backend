@@ -20,12 +20,13 @@ class LFUCache(BaseCaching):
         """overide cache_data, make it OrderdDict to handle insertion order"""
         super().__init__()
         self.cache_data = OrderedDict()
-        self.lfu_cache = {}
+        self.lfu_cache = OrderedDict()
 
     def put(self, key, item):
         """add item and consider update value for exist key as accessed one"""
         if not (key is None or item is None):
             if key in self.cache_data.keys():
+                del self.cache_data[key]
                 self.lfu_cache[key] += 1
 
             if len(self.cache_data) == self.MAX_ITEMS:
