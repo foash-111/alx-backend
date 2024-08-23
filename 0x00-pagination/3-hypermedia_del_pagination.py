@@ -55,6 +55,7 @@ class Server:
         return (start, end)
 
     def get_page(self, page: int = 1, page_size: int = 2) -> List[List]:
+        """get specific range of pages """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
