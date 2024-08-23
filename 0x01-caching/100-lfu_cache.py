@@ -41,6 +41,7 @@ class LFUCache(BaseCaching):
                     old_key, value = self.cache_data.popitem(last=False)
                 if old_key in self.cache_data.keys():
                     del self.cache_data[old_key]
+                    del self.lfu_cache[old_key]
                 print('DISCARD:', old_key)
 
             self.cache_data[key] = item
