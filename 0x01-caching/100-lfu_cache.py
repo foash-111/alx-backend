@@ -22,7 +22,6 @@ class LFUCache(BaseCaching):
         self.cache_data = OrderedDict()
         self.lfu_cache = {}
 
-    
     def put(self, key, item):
         """put"""
         if not (key is None or item is None):
@@ -45,8 +44,7 @@ class LFUCache(BaseCaching):
 
             self.cache_data[key] = item
             if not self.lfu_cache.get(key):
-                self.lfu_cache[key] = 1       
-
+                self.lfu_cache[key] = 1
 
     def get(self, key):
         if self.cache_data.get(key):
