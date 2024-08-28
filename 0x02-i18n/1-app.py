@@ -11,7 +11,7 @@ from flask_babel import Babel, gettext
 
 app = Flask(__name__)
 # Apply the Config class to the app configuration
-app.config.from_object('Config')
+# app.config.from_object('Config')
 
 babel = Babel(app=app)
 
