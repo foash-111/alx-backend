@@ -16,8 +16,9 @@ class Config:
     If no specific language is provided in the URL
     or the user's settings, this locale will be used.
     """
-    app.config['BABEL_DEFAULT_LOCALE'] = 'en'
-    app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
+    # app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
     LANGUAGES = ["en", "fr"]
 
 
