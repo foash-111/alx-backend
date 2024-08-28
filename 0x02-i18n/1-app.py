@@ -1,11 +1,31 @@
 #!/usr/bin/env python3
-"""instantiate the Babel object in your app."""
+"""
+A simple Flask application demonstrating the use of Flask-Babel
+for internationalization (i18n) and localization (l10n).
+
+This module sets up a basic Flask application, configures Flask-Babel
+to handle multiple languages, and renders a simple template with a localized
+greeting message.
+
+Classes:
+    Config: A configuration class for customizing Flask-Babel settings.
+
+Functions:
+    hello(): A function that renders a simple page with a localized greeting.
+
+"""
+
 
 from flask import Flask, render_template
 from flask_babel import Babel, gettext
 
 
 app = Flask(__name__)
+
+
+# Apply the Config class to the app configuration
+app.config.from_object('Config')
+
 babel = Babel(app=app)
 
 
