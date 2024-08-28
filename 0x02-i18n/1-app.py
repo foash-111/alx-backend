@@ -7,10 +7,11 @@ from flask import Flask, render_template
 from flask_babel import Babel, gettext
 
 app = Flask(__name__)
+babel = Babel(app=app)
+
 # Apply the Config class to the app configuration
 # app.config.from_object('Config')
 
-babel = Babel(app=app)
 
 
 class Config:
