@@ -3,11 +3,9 @@
 A simple Flask application demonstrating the use of Flask-Babel
 for internationalization (i18n) and localization (l10n).
 """
-
 from flask import Flask, render_template
 from flask_babel import Babel, gettext
 
-"""doc"""
 app = Flask(__name__)
 # Apply the Config class to the app configuration
 # app.config.from_object('Config')
