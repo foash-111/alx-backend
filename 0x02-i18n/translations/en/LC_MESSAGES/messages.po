@@ -22,5 +22,5 @@ msgstr ""
 msgid "home_title"
 msgstr "Welcome to Holberton"
 
-msgid "Hello world!"
+msgid "home_heder"
 msgstr "Bonjour monde!"
