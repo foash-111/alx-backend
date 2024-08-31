@@ -30,7 +30,7 @@ app.config.from_object(Config)
 
 @app.route('/')
 def hello():
-    """render simple page"""
+    """render simple page and use the get text method for translation"""
     greeting = gettext('Hello world')
     return render_template('1-index.html', greeting=greeting)
 
