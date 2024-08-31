@@ -31,8 +31,9 @@ app.config.from_object(Config)
 @app.route('/')
 def hello():
     """render simple page and use the get text method for translation"""
-    greeting = gettext('Hello world')
-    return render_template('1-index.html', greeting=greeting)
+    title = gettext('home_title')
+    greeting = gettext('home_header')
+    return render_template('3-index.html', greeting=greeting, title=title)
 
 
 @babel.localeselector
