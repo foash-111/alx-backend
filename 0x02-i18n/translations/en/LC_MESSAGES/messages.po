@@ -23,4 +23,4 @@ msgid "home_title"
 msgstr "Welcome to Holberton"
 
 msgid "home_heder"
-msgstr "Bonjour monde!"
+msgstr "Hello world!"
