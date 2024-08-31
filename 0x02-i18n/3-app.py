@@ -33,7 +33,7 @@ def hello():
     """render simple page and use the get text method for translation"""
     title = gettext('home_title')
     greeting = gettext('home_header')
-    return render_template('3-index.html', greeting=greeting, title=title)
+    return render_template('3-index.html')
 
 
 @babel.localeselector
