@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-A simple Flask application demonstrating the use of Flask-Babel
+"""A simple Flask application demonstrating the use of Flask-Babel
 for internationalization (i18n) and localization (l10n).
 """
 
